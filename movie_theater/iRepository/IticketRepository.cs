@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace movie_theater.iRepository
 {
-    interface IticketRepository
+    public interface IticketRepository
     {
         Task<IEnumerable<Ticket>> GetTicket();
 
