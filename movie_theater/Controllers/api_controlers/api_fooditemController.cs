@@ -21,12 +21,12 @@ namespace movie_theater.Controllers.api_controlers
             _context = context;
         }
 
-        // GET: api/api_fooditem
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<FoodItem>>> GetFoodItem()
-        {
-            return await _context.FoodItem.ToListAsync();
-        }
+        //// GET: api/api_fooditem
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<FoodItem>>> GetFoodItem()
+        //{
+        //    return await _context.FoodItem.ToListAsync();
+        //}
 
         // GET: api/api_fooditem/5
         [HttpGet("{id}")]
