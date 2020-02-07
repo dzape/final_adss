@@ -5,7 +5,7 @@ namespace movie_theater.Models
 {
     public partial class Ticket
     {
-        public int? TicketId { get; set; }
+        public int TicketId { get; set; }
         public string TicketMovieName { get; set; }
         public decimal? TicketSalePrice { get; set; }
         public decimal? TicketStudioCutPercentage { get; set; }

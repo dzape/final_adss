@@ -7,7 +7,6 @@ namespace movie_theater.Data
 {
     public partial class MovieTheaterContext : DbContext
     {
-
         public MovieTheaterContext(DbContextOptions<MovieTheaterContext> options)
             : base(options)
         {
@@ -29,9 +28,12 @@ namespace movie_theater.Data
         {
             modelBuilder.Entity<FoodItem>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.FoodId)
+                    .HasName("PK__FoodItem__2F4C4DD8180AA0C8");
 
-                entity.Property(e => e.FoodId).HasColumnName("food_id");
+                entity.Property(e => e.FoodId)
+                    .HasColumnName("food_id")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.FoodName)
                     .HasColumnName("food_name")
@@ -54,9 +56,9 @@ namespace movie_theater.Data
 
             modelBuilder.Entity<Ticket>(entity =>
             {
-                entity.HasNoKey();
-
-                entity.Property(e => e.TicketId).HasColumnName("ticket_id");
+                entity.Property(e => e.TicketId)
+                    .HasColumnName("ticket_id")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.TicketMovieName)
                     .HasColumnName("ticket_movie_name")

@@ -1,0 +1,64 @@
+﻿@model movie_theater.Models.Ticket
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Ticket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TicketId" class="control-label"></label>
+                <input asp-for="TicketId" class="form-control" />
+                <span asp-validation-for="TicketId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketMovieName" class="control-label"></label>
+                <input asp-for="TicketMovieName" class="form-control" />
+                <span asp-validation-for="TicketMovieName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketSalePrice" class="control-label"></label>
+                <input asp-for="TicketSalePrice" class="form-control" />
+                <span asp-validation-for="TicketSalePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketStudioCutPercentage" class="control-label"></label>
+                <input asp-for="TicketStudioCutPercentage" class="form-control" />
+                <span asp-validation-for="TicketStudioCutPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketQuantity" class="control-label"></label>
+                <input asp-for="TicketQuantity" class="form-control" />
+                <span asp-validation-for="TicketQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketProfile" class="control-label"></label>
+                <input asp-for="TicketProfile" class="form-control" />
+                <span asp-validation-for="TicketProfile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketProfilePerItem" class="control-label"></label>
+                <input asp-for="TicketProfilePerItem" class="form-control" />
+                <span asp-validation-for="TicketProfilePerItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

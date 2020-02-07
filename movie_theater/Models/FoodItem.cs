@@ -5,7 +5,7 @@ namespace movie_theater.Models
 {
     public partial class FoodItem
     {
-        public int? FoodId { get; set; }
+        public int FoodId { get; set; }
         public string FoodName { get; set; }
         public decimal? FoodSalePrice { get; set; }
         public decimal? FoodUnitPrice { get; set; }
