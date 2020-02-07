@@ -8,5 +8,7 @@ namespace movie_theater.iRepository
     {
         Task<IEnumerable<Ticket>> GetTicket();
 
+        Task<IEnumerable<Ticket>> Profit(); // (Quantity * SalePrice) -(StudioCutPercentage * (Quantity * SalePrice)
+
     }
 }

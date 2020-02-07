@@ -32,7 +32,7 @@ namespace movie_theater
             services.AddDbContextPool<MovieTheaterContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<IticketRepository, ticket_repository>();
+            services.AddScoped<IticketRepository, ticket>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
