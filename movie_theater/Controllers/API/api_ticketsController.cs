@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using movie_theater.Data;
 using movie_theater.iRepository;
 using movie_theater.Models;
 
@@ -30,7 +25,7 @@ namespace movie_theaater.Controllers.api_controlers
             return await _ticket.GetTicket();
         }
 
-
+        #region
         //private readonly MovieTheaterContext _context;
 
         //public api_ticketsController(MovieTheaterContext context)
@@ -59,9 +54,9 @@ namespace movie_theaater.Controllers.api_controlers
         //    return ticket;
         //}
 
-        //// PUT: api/api_tickets/5
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        //// more details see https://aka.ms/RazorPagesCRUD.
+        // PUT: api/api_tickets/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         //[HttpPut("{id}")]
         //public async Task<IActionResult> PutTicket(int id, Ticket ticket)
         //{
@@ -137,5 +132,6 @@ namespace movie_theaater.Controllers.api_controlers
         //{
         //    return _context.Ticket.Any(e => e.TicketId == id);
         //}
+        #endregion
     }
 }

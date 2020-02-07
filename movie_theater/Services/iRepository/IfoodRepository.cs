@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace movie_theater.iRepository
 {
-    interface IfoodRepository
+    public interface IfoodRepository
     {
-        Task<IEnumerable<FoodItem>> GetTicket();
+        Task<IEnumerable<FoodItem>> GetFoodItems();
 
     }
 }
