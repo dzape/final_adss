@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace movie_theater.Repository
 {
-    public class ticket : IticketRepository 
+    public class ticket : IticketRepository
     {
         private readonly MovieTheaterContext _context;
 
@@ -22,11 +22,16 @@ namespace movie_theater.Repository
             return await _context.Ticket.ToListAsync();
         }
 
-        public Task<IEnumerable<Ticket>> Profit()
-        {
-            //return (ticket.TicketQuantity * ticket.TicketSalePrice) - (ticket.TicketStudioCutPercentage * ticket.TicketQuantity * ticket.TicketSalePrice);
+        //async Task GetTicketById(object id)
+        //{
+        //    return await _context.FindAsync(id);
+        //}
 
-            throw new System.NotImplementedException();
-        }
+
+        //public Task<IEnumerable<Ticket>> Profit()
+        //{
+        //    float test = (ticket.TicketQuantity * ticket.TicketSalePrice) (ticket.TicketStudioCutPercentage * ticket.TicketQuantity * ticket.TicketSalePrice);
+        //}
     }
 }
+
